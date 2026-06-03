@@ -24,7 +24,7 @@ int main(){
     int num,reversed;
 
     //Input by the user 
-    printf("Enter the number to get it's reverse:");
+    printf("Enter the number to get its reverse:");
     scanf("%d",&num);
 
     //Calling the recursive function with zero as the inital reversed value
