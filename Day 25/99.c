@@ -22,14 +22,14 @@ int main(){
     printf("Enter %d names:\n", n);
     for(int i=0; i<n; i++){
         printf("Name: %d:", i+1);
-        fgets(names[i],sizeof(names[i]), stdin);
+        fgets(names[i], length+1 , stdin);
         //Remove trailing newline character 
         names[i][strcspn(names[i],"\n")]='\0';
     }
 
     //Bubble sort logic
     for(int i=0; i<n-1; i++){
-        for(j=0; j<n-i-1; j++){
+        for(int j=0; j<n-i-1; j++){
             if(strcmp(names[j],names[j+1])>0){
                 strcpy(temp,names[j]);
                 strcpy(names[j],names[j+1]);
