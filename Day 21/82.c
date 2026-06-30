@@ -11,11 +11,19 @@ int main(){
     printf("Enter the size of string:");
     scanf("%d", &size);
 
+    //Clear input buffer
+    while(getchar()!= '\n');
+    
     char str[size+1];                   //Allocate space with +1 for null character 
 
     //Get string from user
     printf("Enter the string to reverse:");
-    scanf("%s", str);
+    if(fgets(str, size+1, stdin) == NULL){
+        printf("Error reading input.\n");
+        return 1;
+    }
+    //Strip trailing spaces
+    str[strcspn(str, "\n")] = '\0';
 
     //Calclate Total length of string
     while(str[len]!='\0'){
