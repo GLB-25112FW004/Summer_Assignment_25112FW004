@@ -11,11 +11,19 @@ int main(){
     printf("Enter the size of string:");
     scanf("%d", &size);
 
+    //Clear input buffer
+    while(getchar()!= '\n');
+
     char str[size];
 
     //Get the string from user
     printf("Enter the string:");
-    scanf("%s", str);                     
+    if(fgets(str,size, stdin)==NULL){
+        printf("Error, reading input.\n");
+        return 1;
+    }
+
+    str[strcspn(str,"\n")] = '\0';
 
     //Count characters 
     while(str[length]!='\0'){             //Compare with null character 
