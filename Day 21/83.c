@@ -11,11 +11,20 @@ int main(){
     printf("Enter the size of string:");
     scanf("%d", &size);
 
+    //Clear input buffer
+    while(getchar() != '\n');
+    
+
     char str[size+1];
 
     //Get the string from user 
     printf("Enter the string:");
-    scanf("%s", str);
+    if(fgets(str, size+1, stdin) == NULL){
+        printf("Error reading input.\n");
+        return 1;
+    }
+
+    str[strcspn(str, "\n")] = '\0';
 
     //Loop through each character until null character 
     for(int i=0; str[i]!='\0'; i++){
