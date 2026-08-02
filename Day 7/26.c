@@ -32,7 +32,7 @@ int main(){
 }
 
 //Recursive Function
-int Fibonacci(int n){
+long long Fibonacci(int n){
     if(n==0){.               
         return 0;
     }
