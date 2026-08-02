@@ -1,6 +1,6 @@
 //Wap in c to find the largest prime factor of a number:
 
-#include<studio.h>
+#include<stdio.h>
 int main(){
 
     //Variable declaration 
