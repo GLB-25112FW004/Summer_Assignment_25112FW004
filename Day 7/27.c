@@ -19,7 +19,7 @@ int sumofdigits(int n){
     int sum= sumofdigits(remnum);
 
     //Output 
-    return lastdig + sum
+    return lastdig + sum;
 }
 
 int main(){
