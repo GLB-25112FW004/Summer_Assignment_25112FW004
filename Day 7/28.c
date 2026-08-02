@@ -11,7 +11,7 @@ int reversenum(int n, int rev){
 
     int lastdig= n%10;                   //Getting last digit of the number
     int updrev= (rev*10)+ lastdig;       //Adding to reversed number
-    int remnum= num/10;                  //Updating number
+    int remnum= n/10;                  //Updating number
 
     //Recursive calling
     int result= reversenum(remnum,updrev);
